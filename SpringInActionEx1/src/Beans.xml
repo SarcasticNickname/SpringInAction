@@ -5,7 +5,17 @@
  xsi:schemaLocation="http://www.springframework.org/schema/beans
  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
  
- 	<bean id = "juggler" class = "com.springinaction.Juggler">
+ 	<bean id = "juggler" class = "com.springinaction.Juggler"/>
+ 	
+ 	<bean id = "jugglerParam" class = "com.springinaction.Juggler" >
+ 	<constructor-arg value = "13"/>
  	</bean>
- 
+ 	
+ 	<bean id = "sonnet" class = "com.springinaction.Sonnet29"/>
+ 	
+ 	<bean id = "poeticJuggler" class = "com.springinaction.PoeticJuggler">
+ 	<constructor-arg value = "13"/>
+ 	<constructor-arg ref = "sonnet"/>
+ 	</bean>
+
 </beans>
