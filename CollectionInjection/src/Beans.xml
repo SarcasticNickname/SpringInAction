@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+ 
+ 	<bean id = "oneManBand" 
+ 		  class = "com.springinaction.OneManBand">
+ 		<property name="instruments">
+ 			<list>
+ 				<ref bean = "guitar"/>
+ 				<ref bean = "sax"/>
+ 				<ref bean = "piano"/>
+ 			</list>
+ 		</property>
+ 	</bean>
+ 	
+ 	<bean id = "guitar" class = "com.springinaction.Guitar"/>
+ 	<bean id = "sax" class = "com.springinaction.Sax"/>
+ 	<bean id = "piano" class = "com.springinaction.Piano"/>
+ 
+ </beans>
