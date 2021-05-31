@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+ 
+ 	<bean id = "ikotika" class = "com.springinaction.Singer"
+ 		  init-method = "greet" destroy-method = "goodbye">
+ 		<property name = "age" value = "#{25}"/>
+ 		<property name = "name" value = "Ikotika"/>
+ 		<property name = "song">
+ 			<bean class = "com.springinaction.HappyBirthday"/>
+ 		</property>
+ 	</bean>
+ 	
+ 	<bean id = "sokol" class = "com.springinaction.Singer"
+ 			init-method = "greet" destroy-method = "goodbye">
+ 		<property name = "name" value = "Sokol"/>
+ 		<property name = "song" value = "#{ikotika.song}"/>
+ 		<property name = "age" value = "#{ikotika.age}"/>
+ 	</bean>
+ 
+ </beans>

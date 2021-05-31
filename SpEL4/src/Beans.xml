@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+ 
+ 	<bean id = "math2" class = "com.springinaction.Math">
+ 		<property name = "number1" value = "#{124}"/>
+ 		<property name = "number2" value = "#{345}"/>
+ 	</bean>
+ 	
+ 	<bean id = "math" class = "com.springinaction.Math">
+ 		<property name = "number1" value = "#{math2.number1}"/>
+ 		<property name = "number2" value = "#{math2.number2}"/>
+ 		<property name = "add" value = "#{math2.number1 + math2.number2}"/>
+ 		<property name = "subtract" value = "#{math2.number1 - math2.number2}"/>
+ 		<property name = "divide" value = "#{math2.number1/math2.number2}"/>
+ 		<property name = "PI" value = "#{T(java.lang.Math).PI}"/>
+ 	</bean>
+ 
+ </beans>
