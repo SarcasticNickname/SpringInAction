@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+ 
+	 <bean id = "JACK" class = "com.springinaction.Jack" 
+	 	   init-method = "greet" destroy-method = "goodbye">
+	 	   
+		 <property name = "sax" value = "#{sax}"/>
+		 <property name = "guitar" value = "#{guitar}"/>
+		 <property name = "piano" value = "#{piano}"/>
+		 
+	 </bean>
+ 
+	 <bean id = "sax" class = "com.springinaction.Sax"/>
+	 <bean id = "guitar" class = "com.springinaction.Guitar"/>
+	 <bean id = "piano" class = "com.springinaction.Piano"/>
+	 
+ </beans>
