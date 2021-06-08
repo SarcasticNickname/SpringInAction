@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+ 	
+ 	<!-- If uncomment lines below then exception is thrown -->
+ 	<!-- Because autowiring by type can not differ the 3 instruments -->
+ 	<!--bean id = "sax" class = "com.springinaction.Sax"/-->
+ 	<!--bean id = "guitar" class = "com.springinaction.Guitar"/-->
+ 	
+ 	<!-- The other way is to use primary attribute, but it's important -->
+ 	<!-- to remember that primary is true for all beans by default -->
+ 	<bean id = "sax" class = "com.springinaction.Sax" primary = "true"/>
+ 	<bean id = "guitar" class = "com.springinaction.Guitar" primary = "false"/>
+ 	<bean id = "piano" class = "com.springinaction.Piano" primary = "false"/>
+ 	
+ 	<bean id = "JACK" class = "com.springinaction.Jack" autowire = "byType"/> 
+ 
+ </beans>
