@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+ 
+	 <bean id = "employee" class = "com.springinaction.Employee">
+		 <property name = "educated" value = "true"/>
+		 <property name = "experienceYears" value = "5"/>
+	 </bean>
+	 
+	 <bean id = "employer" class = "com.springinaction.Employer">
+	 	<property name = "salary" value = "70000" />
+	 	<property name = "workHours" value = "44" />
+	 </bean>
+	 
+	 <bean id = "deal" class = "com.springinaction.Deal">
+	 	<property name = "deal" value = "#{employer.salary gt 65000 and employer.workHours lt 50 and 
+	 										employee.educated eq true and employee.experienceYears gt 3 ? true : false}"/>
+	 </bean>
+ 
+ </beans>
