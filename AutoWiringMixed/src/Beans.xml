@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+ 
+ 	<bean id = "guitar" class = "com.springinaction.Guitar"/>
+ 	<bean id = "sax" class = "com.springinaction.Sax"/>
+ 	<bean id = "info" class = "com.springinaction.Info">
+ 		<constructor-arg value = "Radio Tapok" />
+ 		<constructor-arg value = "30" />
+ 		<constructor-arg value = "true"/>
+  	</bean>
+  	
+  	<!-- property instrument is set manually, info - automatically. -->
+  	<!-- Thus, autowiring by type doesn't throw an exception(because of 2 instruments: sax and guitar)-->
+  	<bean id = "RADIOTAPOK" class = "com.springinaction.RadioTapok" autowire = "byType">
+  		<property name = "instrument" ref = "sax"/>
+  	</bean> 
+
+ </beans>

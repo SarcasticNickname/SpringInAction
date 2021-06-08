@@ -7,7 +7,8 @@
 
 	 <!-- Can't create 2 beans with the same name, so  -->
 	 <!-- autowiring by name seems ok, but of course requires --> 
-	 <!-- a bean named exactly as property -->
+	 <!-- a bean named exactly as wiring property -->
+	 
 	 <bean id = "sax" class = "com.springinaction.Sax"/>
 	 <bean id = "guitar" class = "com.springinaction.Guitar"/>
 	 <bean id = "piano" class = "com.springinaction.Piano"/>
