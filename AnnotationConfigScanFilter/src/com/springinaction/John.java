@@ -28,8 +28,8 @@ public class John implements Performer {
 	
 	@Override
 	public String toString() {
-		return "Introdusing " + name + "\n" +
-				""
+		return "Introdusing " + name + ":" + "\n" +
+				"Age: " + age + ", Experience: " + experience;
 	}
 
 }
