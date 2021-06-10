@@ -9,16 +9,24 @@ public class SpringInActionConfig {
 	@Bean("bob")
 	public Bob createBob() {
 		Bob bob = new Bob();
-		Instrument instrument = new Guitar();
-		bob.setInstrument(instrument);
+		bob.setInstrument(createGuitar());
 		return bob;
 	}
 	
 	@Bean("jack")
 	public Jack createJack() {
 		Jack jack = new Jack();
-		Instrument instrument = new Violin();
-		jack.setInstrument(instrument);
+		jack.setInstrument(createViolin());
 		return jack;
+	}
+	
+	@Bean("violin")
+	public Instrument createViolin() {
+		return new Violin();
+	}
+	
+	@Bean("guitar")
+	public Instrument createGuitar() {
+		return new Guitar();
 	}
 }
