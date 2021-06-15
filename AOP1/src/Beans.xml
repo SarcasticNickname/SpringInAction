@@ -23,10 +23,10 @@
 	 		<aop:before pointcut = "execution(* com.springinaction.Performer.perform(..))"
 	 					method = "turnOffCellPhones"/>
 	 					
-	 		<aop:after-returning pointcut = "* com.springinaction.Performer.perform(..))"
+	 		<aop:after-returning pointcut = "execution(* com.springinaction.Performer.perform(..))"
 	 							 method="applaud"/>
 	 							 
-	 		<aop:after-throwing  pointcut = "* com.springinaction.Performer.perform(..))"
+	 		<aop:after-throwing  pointcut = "execution(* com.springinaction.Performer.perform(..))"
 	 							 method="demandRefund"/>
 
 	 	</aop:aspect>

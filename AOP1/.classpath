@@ -111,10 +111,8 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/aspectj1.9.6/lib/aspectjweaver.jar">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
+	<classpathentry kind="lib" path="D:/aspectj1.9.6/lib/aspectjrt.jar"/>
+	<classpathentry kind="lib" path="D:/aspectj1.9.6/lib/aspectjtools.jar"/>
+	<classpathentry kind="lib" path="D:/aspectj1.9.6/lib/aspectjweaver.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

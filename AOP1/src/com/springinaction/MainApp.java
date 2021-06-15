@@ -15,7 +15,6 @@ public class MainApp {
 		System.out.println("Performers are going to sing: ");
 		
 		jack.perform();
-		bob.perform();
 		
 		ctx.close();
 	}
