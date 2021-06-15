@@ -10,7 +10,6 @@ public class MainApp {
 				new ClassPathXmlApplicationContext("Beans.xml");
 		
 		Performer jack = (Performer)ctx.getBean("Jack");
-		Performer bob = (Performer)ctx.getBean("Bob");
 		
 		System.out.println("Performers are going to sing: ");
 		
